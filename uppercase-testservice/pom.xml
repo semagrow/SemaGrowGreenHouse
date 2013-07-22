@@ -11,8 +11,23 @@
 	</parent>
 
 	<artifactId>uppercase-testservice</artifactId>
+    <packaging>jar</packaging>
 
 	<name>A service intendend for testing purposes</name>
 	<description>Converts a passed string to uppercase and returns it</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+    </dependencies>
 
 </project>
