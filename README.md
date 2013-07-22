@@ -1,4 +1,4 @@
 Central place to build the SemaGrow
 
-* WebApp
-* .deb/.rpm Packaged
+* Deployable web application
+* .deb/.rpm packages
