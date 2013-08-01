@@ -7,8 +7,8 @@ Building From Source
 This is the central place to build the SemaGrow Component Stack for local deployment. Therefore, the following
 software/tools are required:
 
-* Maven 3
-* JDK 1.6
+* [Maven 3](http://maven.apache.org/)
+* [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 
 To build the stack, clone this repository, change to the newly created directory and execute
 
@@ -35,4 +35,4 @@ Each module must be able to build independently by executing
 
     mvn clean install
 
-to ensure it can be properly integrated.
+in the respective module subdirectory to ensure it can be properly integrated.
