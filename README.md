@@ -18,8 +18,8 @@ Building .rpm and .deb packages can be done by
 
     mvn rpm::rpm (not yet supported)
 
-Structure and Contribution Notes
---------------------------------
+Project Structure and Contribution Notes
+----------------------------------------
 
 The project consists of multiple modules, two in it's initial phase:
 
@@ -28,7 +28,7 @@ The project consists of multiple modules, two in it's initial phase:
 
 Contributors are expected to create their modules in a similar way as shown by the ``uppercase-testservice``. Components
 intended for access via the web frontend must be provided as Java classes and annotated as
-[Spring framework][http://www.springsource.org/spring-framework] components (cf. ``Uppercase.java``). Therefore, the
+[Spring framework](http://www.springsource.org/spring-framework) components (cf. ``Uppercase.java``). Therefore, the
 ``pom.xml`` of each module must contain dependencies to the Spring framework (cf. ``uppercase-testservice/pom.xml``).
 
 Each module must be able to build independently by executing
