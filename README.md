@@ -35,4 +35,4 @@ Each module must be able to build independently by executing
 
     mvn clean install
 
-in the respective module subdirectory to ensure it can be properly integrated.
+in the respective module subdirectory to ensure it proper integration.
