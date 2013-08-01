@@ -5,6 +5,6 @@
 
 <html>
 <body>
-	<h1><c:out value="${message}"/></h1>
+	<h1>Converted input to <c:out value="${message}"/></h1>
 </body>
 </html>

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -15,9 +16,9 @@ public class SemaGrowController {
     public Uppercase uppercase;
 
     @RequestMapping(value="/uppercase", method = RequestMethod.GET)
-    public ModelAndView toUppercase() {
+    public ModelAndView toUppercase(@RequestParam String toUpperCase) {
         ModelAndView mav = new ModelAndView("semagrow");
-        mav.addObject("message", uppercase.toUppercase("this is all uppercase"));
+        mav.addObject("message", uppercase.toUppercase(toUpperCase));
         return mav;
     }
 
