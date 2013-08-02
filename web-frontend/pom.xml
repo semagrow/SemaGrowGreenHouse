@@ -15,7 +15,12 @@
 
 	<name>Web Frontend for accessing SemaGrow Services</name>
 
-    <dependencies>
+    <properties>
+        <app.home>/opt/</app.home>
+    </properties>
+
+
+<dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -81,6 +86,39 @@
                         </connector>
                     </connectors>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <version>2.0.1</version>
+                <executions>
+                    <execution>
+                        <id>generate-rpm</id>
+                        <goals>
+                            <goal>rpm</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <copyright>GPL</copyright>
+                    <distribution>SemaGrowGreenHouse</distribution>
+                    <group>Applications/Databases</group>
+                    <icon>src/main/resources/logo.gif</icon>
+                    <packager>SWC</packager>
+                    <prefix>/usr/local</prefix>
+                    <changelogFile>src/changelog</changelogFile>
+                    <mappings>
+                        <mapping>
+                            <directory>${app.home}/${project.parent.artifactId}</directory>
+                            <sources>
+                                <source>
+                                    <location>target/${project.artifactId}-${project.version}.war</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                    </mappings>
                 </configuration>
             </plugin>
         </plugins>
