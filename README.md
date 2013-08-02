@@ -1,6 +1,30 @@
 SemaGrow GreenHouse
 ===================
 
+Usage Instructions
+------------------
+
+Paste this snippet into your ``pom.xml`` to declare dependencies
+
+    <dependency>
+        <groupId>eu.semagrow</groupId>
+        <artifactId>semagrow-greenhouse</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+You also need to state in your ``pom.xml`` from which repository it should fetch the dependency
+
+    <repositories>
+        <repository>
+            <id>SemaGrowGreenHouse-mvn-repo</id>
+            <url>https://raw.github.com/semagrow/SemaGrowGreenHouse/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
 Building From Source
 --------------------
 
